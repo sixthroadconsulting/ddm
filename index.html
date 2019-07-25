@@ -45,29 +45,44 @@ body {font-family: Arial;}
 </head>
 <body>
 
-<h2>Tabs</h2>
-<p>Click on the buttons inside the tabbed menu:</p>
+<h2>District Development Monitor - Data Portal</h2>
+<!--<p>Click on the buttons inside the tabbed menu to open dashboard of choice:</p>-->
 
 <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+  <button class="tablinks" onclick="openCity(event, 'Dashboard Home')">Poverty</button>
   <button class="tablinks" onclick="openCity(event, 'Poverty')">Poverty</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'Population')">Population</button>
+  <button class="tablinks" onclick="openCity(event, 'PSLM')">PSLM</button>
+  <button class="tablinks" onclick="openCity(event, 'MICS')">MICS</button>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About content goes here</h3>
+</div>
+  
+<div id="About" class="tabcontent">
+  <h3>Dashboard Home</h3>
+  <p>Yahya's spatial stuff here</p>
 </div>
 
 <div id="Poverty" class="tabcontent">
-  <iframe src="https://public.tableau.com/views/PakistanPovertyIndicators/Poverty?:embed=y&:display_count=yes&:origin=viz_share_link" height="900" width="600">"></iframe>
-
+  <iframe src="https://public.tableau.com/views/PakistanPovertyIndicators/Poverty?:embed=y&:display_count=yes&:origin=viz_share_link" height="900" width="700"></iframe>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+<div id="Population" class="tabcontent">
+  <iframe src="https://public.tableau.com/views/PopulationDistributionAcrossProvinces/Population-Dashboard?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link" height="900" width="700"></iframe>
 </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="PSLM" class="tabcontent">
+  <iframe src="https://public.tableau.com/views/Pakistan_Indicators/PSLM-Dashboard?:embed=y&:display_count=yes&:origin=viz_share_link" height="900" width="700"></iframe>
 </div>
+
+<div id="MICS" class="tabcontent">
+  <iframe src="https://public.tableau.com/views/MultipleIndicatorsClusterSurveyMICS2014forPunjabSindh/MICS-Dashboard?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link" height="900" width="700"></iframe>
+</div>
+  
+ 
 
 <script>
 function openCity(evt, cityName) {
