@@ -83,41 +83,41 @@ body {font-family: Arial;}
   <p align="justify">A robust "District Development Monitor (DDM)" was developed for ECD in Pakistan, which is a dynamic, flexible and real-time updated analytical tool and framework designed to facilitate the Decision Support Systems (DSS) during the various stages of project life cycle including planning, implementation, monitoring, resource allocation, scenario-based analysis, modelling and others, across all the 110 districts of Pakistan. The DDM was developed as a user-friendly tool with an excellent cross platform compatibility that makes good use of visuals to represent the results and has no requirement of any propriety software use from the user’s end. It enabled the evaluation of projects across a range of critical sectors such as infrastructure, energy, transportation, logistics, water resource management and sanitization, education, health and so forth.
     </p> -->
   
-    <script type="text/javascript" src="https://raw.github.com/mozilla/pdf.js/gh-pages/build/pdf.js"></script>
-    <script type="text/javascript">
-    function renderPDF(url, canvasContainer, options) {
-        var options = options || { scale: 1 };
-    
-        function renderPage(page) {
-            var viewport = page.getViewport(options.scale);
-            var canvas = document.createElement('canvas');
-            var ctx = canvas.getContext('2d');
-            var renderContext = {
-              canvasContext: ctx,
-              viewport: viewport
-            };
-    
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            canvasContainer.appendChild(canvas);
-    
-            page.render(renderContext);
-        }
-    
-        function renderPages(pdfDoc) {
-            for(var num = 1; num <= pdfDoc.numPages; num++)
-                pdfDoc.getPage(num).then(renderPage);
-        }
-        PDFJS.disableWorker = true;
-        PDFJS.getDocument(url).then(renderPages);
-    }   
-    </script> 
-    
-    <div id="holder"></div>
-    
-    <script type="text/javascript">
-    renderPDF('files/DDM-1-FinalPresentation.pdf', document.getElementById('holder'));
-    </script>    
+  <script type="text/javascript" src="https://raw.github.com/mozilla/pdf.js/gh-pages/build/pdf.js"></script>
+  <script type="text/javascript">
+  function renderPDF(url, canvasContainer, options) {
+      var options = options || { scale: 1 };
+  
+      function renderPage(page) {
+          var viewport = page.getViewport(options.scale);
+          var canvas = document.createElement('canvas');
+          var ctx = canvas.getContext('2d');
+          var renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+  
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          canvasContainer.appendChild(canvas);
+  
+          page.render(renderContext);
+      }
+  
+      function renderPages(pdfDoc) {
+          for(var num = 1; num <= pdfDoc.numPages; num++)
+              pdfDoc.getPage(num).then(renderPage);
+      }
+      PDFJS.disableWorker = true;
+      PDFJS.getDocument(url).then(renderPages);
+  }   
+  </script> 
+  
+  <div id="holder"></div>
+  
+  <script type="text/javascript">
+  renderPDF('files/DDM-1-FinalPresentation.pdf', document.getElementById('holder'));
+  </script>    
   
 </div>
 
