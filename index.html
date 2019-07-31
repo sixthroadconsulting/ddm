@@ -65,7 +65,7 @@ body {font-family: Arial;}
 
 <div class="tab">
   <center>
-    <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+    <button class="tablinks" onclick="openCity(event, 'About')">District Development Monitor</button>
     <button class="tablinks" onclick="openCity(event, 'Cross-Tabulation')">Descriptive Statistics</button>
     <button class="tablinks" onclick="openCity(event, 'Spatial-Data')">Spatial Data</button>
     <button class="tablinks" onclick="openCity(event, 'Analysis')">Analysis</button>
@@ -78,12 +78,50 @@ body {font-family: Arial;}
 
 
 <div id="About" class="tabcontent" style="display:block">
-  <img src="img/about.png" alt="DDM" width="100%" height="100%">
+  <!--<img src="img/about.png" alt="DDM" width="100%" height="100%">
 
   <p align="justify">A robust "District Development Monitor (DDM)" was developed for ECD in Pakistan, which is a dynamic, flexible and real-time updated analytical tool and framework designed to facilitate the Decision Support Systems (DSS) during the various stages of project life cycle including planning, implementation, monitoring, resource allocation, scenario-based analysis, modelling and others, across all the 110 districts of Pakistan. The DDM was developed as a user-friendly tool with an excellent cross platform compatibility that makes good use of visuals to represent the results and has no requirement of any propriety software use from the user’s end. It enabled the evaluation of projects across a range of critical sectors such as infrastructure, energy, transportation, logistics, water resource management and sanitization, education, health and so forth.
-    </p>
-</div>
+    </p> -->
   
+    <script type="text/javascript" src="https://raw.github.com/mozilla/pdf.js/gh-pages/build/pdf.js"></script>
+    <script type="text/javascript">
+    function renderPDF(url, canvasContainer, options) {
+        var options = options || { scale: 1 };
+    
+        function renderPage(page) {
+            var viewport = page.getViewport(options.scale);
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            var renderContext = {
+              canvasContext: ctx,
+              viewport: viewport
+            };
+    
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            canvasContainer.appendChild(canvas);
+    
+            page.render(renderContext);
+        }
+    
+        function renderPages(pdfDoc) {
+            for(var num = 1; num <= pdfDoc.numPages; num++)
+                pdfDoc.getPage(num).then(renderPage);
+        }
+        PDFJS.disableWorker = true;
+        PDFJS.getDocument(url).then(renderPages);
+    }   
+    </script> 
+    
+    <div id="holder"></div>
+    
+    <script type="text/javascript">
+    renderPDF('files/DDM-1-FinalPresentation.pdf', document.getElementById('holder'));
+    </script>    
+  
+</div>
+
+
 <div id="Cross-Tabulation" class="tabcontent">
   <center>
       <div class='tableauPlaceholder' id='viz1564391789775' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PovertyDataPortal-NEW1&#47;Dashboard12&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PovertyDataPortal-NEW1&#47;Dashboard12' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PovertyDataPortal-NEW1&#47;Dashboard12&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1564391789775');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='120px';vizElement.style.maxWidth='1320px';vizElement.style.width='100%';vizElement.style.height='1287px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
