@@ -11,8 +11,8 @@ body {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-  margin: 65px auto;
-  margin-bottom: 0px;
+  /* margin: 65px auto;
+  margin-bottom: 0px; */
   
 }
 
@@ -33,12 +33,12 @@ body {
   background-color: #ddd;
 }
 
-.logos img {
+/* .logos img {
   float: left;
   width: 100px;
   height: 100px;
-  /* background: #555; */
-}
+  background: #555; 
+} */
 
 .logos h1{
   position: relative;
