@@ -25,17 +25,13 @@
   </div> 
 </head>
 
-<body onload="createViz(0);"> 
-
+<body> 
+<!-- <body onload="createViz(0);"> -->
   <div class="tab">
 
     <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">Home</button>
-    <button class="tablinks" onclick="openTab(event, 'Cross-Tabulation')">Descriptive Statistics</button>
+    <button class="tablinks" onclick="openTab(event, 'Cross-Tabulation')">Analysis</button>
     <button class="tablinks" onclick="openTab(event, 'Results')">Results</button>
-    <button class="tablinks" onclick="openTab(event, 'Poverty')">Poverty</button>
-    <button class="tablinks" onclick="openTab(event, 'Population')">Population</button>
-    <button class="tablinks" onclick="openTab(event, 'PSLM')">PSLM</button>
-    <button class="tablinks" onclick="openTab(event, 'MICS')">MICS</button>
     <button class="tablinks" onclick="openTab(event, 'Report')">Glossary</button>
   </div>
 
@@ -55,45 +51,19 @@
 
 
   <div id="Cross-Tabulation" class="tabcontent" >
-    <!-- <div id="controls" style="padding:20px; float:right;">
-      <button style="width:100px;" onclick="javascript:createViz(-1);">Previous</button>
-      <button style="width:100px;" onclick="javascript:createViz(1);">Next</button>  
-    </div> -->
-  
     <div class="navbar">
-        <a href="javascript:createViz(0)">Tabular Analysis</a>
-        <a href="javascript:createViz(1)">Time Series Analysis</a>
-        <a href="javascript:createViz(2)">Spatial Analysis</a>
+        <a href="javascript:createViz(0);">Tabular</a>
+        <a href="javascript:createViz(1);">Time Series</a>
+        <a href="javascript:createViz(2);">Spatial Representation</a>
+        <a href="javascript:createViz(3);">Poverty</a>
+        <a href="javascript:createViz(4);">Population</a>
+        <a href="javascript:createViz(5);">PSLM</a>
+        <a href="javascript:createViz(6);">MICS</a>
     </div>
 
     <div class="main">
         
     </div>
-  </div>
-
-
-  <div id="Poverty" class="tabcontent">
-    <center><iframe
-        src="https://public.tableau.com/views/PakistanPovertyIndicators/Poverty?:embed=y&:display_count=yes&:origin=viz_share_link"
-        height="1000" width="800" frameBorder="0"></iframe></center>
-  </div>
-
-  <div id="Population" class="tabcontent">
-    <center><iframe
-        src="https://public.tableau.com/views/PopulationDistributionAcrossProvinces/Population-Dashboard?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link"
-        height="1000" width="800" frameBorder="0"></iframe></center>
-  </div>
-
-  <div id="PSLM" class="tabcontent">
-    <center><iframe
-        src="https://public.tableau.com/views/Pakistan_Indicators/PSLM-Dashboard?:embed=y&:display_count=yes&:origin=viz_share_link"
-        height="1000" width="800" frameBorder="0"></iframe></center>
-  </div>
-
-  <div id="MICS" class="tabcontent">
-    <center><iframe
-        src="https://public.tableau.com/views/MultipleIndicatorsClusterSurveyMICS2014forPunjabSindh/MICS-Dashboard?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link"
-        height="1000" width="800" frameBorder="0"></iframe></center>
   </div>
 
   <div id="Report" class="tabcontent">

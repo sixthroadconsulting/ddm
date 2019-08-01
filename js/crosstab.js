@@ -1,29 +1,29 @@
 
 var vizList = ["https://public.tableau.com/views/PovertyDataPortal-NEW1/Dashboard12?:embed=y&:display_count=yes",
-        "https://public.tableau.com/views/GraphicalAnalysisofDevelopmentIndicators/Graph-Dashboard?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link",
-        "https://public.tableau.com/views/SpatialData_15644661255310/Dashboard1"];
+        "https://public.tableau.com/views/GraphicalAnalysisofDevelopmentIndicators/Graph-Dashboard",
+        "https://public.tableau.com/views/SpatialData_15644661255310/Dashboard1",
+        "https://public.tableau.com/views/PakistanPovertyIndicators/Poverty",
+        "https://public.tableau.com/views/PopulationDistributionAcrossProvinces/Population-Dashboard",
+        "https://public.tableau.com/views/Pakistan_Indicators/PSLM-Dashboard",
+        "https://public.tableau.com/views/MultipleIndicatorsClusterSurveyMICS2014forPunjabSindh/MICS-Dashboard"
+        ];
     
-var viz,
-    vizLen = vizList.length,
-    vizCount = 0;
+var viz;
 
 function createViz(vizPlusMinus) {
     var vizDiv = document.getElementById("Cross-Tabulation"),
         options = {
-            hideTabs: true
+            // width: vizDiv.offsetWidth,
+            // height: vizDiv.offsetHeight,
+            hideTabs: true,
+            hideToolbar: true
         };
-    vizCount = vizCount + vizPlusMinus;
-    
-    if (vizCount >= vizLen) { 
-    // Keep the vizCount in the bounds of the array index.
-        vizCount = 0;
-    } else if (vizCount < 0) {
-        vizCount = vizLen - 1;
-    }
     
     if (viz) { // If a viz object exists, delete it.
         viz.dispose();
     }
-    var vizURL = vizList[vizCount];
+    // var vizURL = vizList[vizCount];
+    var vizURL = vizList[vizPlusMinus];
+    console.log(vizURL);
     viz = new tableau.Viz(vizDiv, vizURL, options); 
 }
