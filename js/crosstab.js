@@ -1,6 +1,6 @@
 
 var vizList = ["https://public.tableau.com/views/PovertyDataPortal-NEW1/Dashboard12?:embed=y&:display_count=yes",
-        "https://public.tableau.com/views/Graph_15645824272260/Graph",
+        "https://public.tableau.com/views/GraphicalAnalysisofDevelopmentIndicators/Graph-Dashboard?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link",
         "https://public.tableau.com/views/SpatialData_15644661255310/Dashboard1"];
     
 var viz,
