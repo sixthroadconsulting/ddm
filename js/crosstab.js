@@ -28,3 +28,4 @@ function createViz(vizPlusMinus) {
     console.log(vizURL);
     viz = new tableau.Viz(vizDiv, vizURL, options); 
 }
+

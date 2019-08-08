@@ -9,8 +9,6 @@
    } 
 
   
-  
-  
   /* Links inside the navbar */
   .navbar a {
     float: left;
@@ -22,12 +20,15 @@
   }
   
   /* Change background on mouse-over */
-  .navbar a:hover {
-    background: #ddd;
-    color: black;
+  .navbar a:hover, .dropbtn, .dropdown:hover {
+    /* background: #ddd; */
+    background: white;
+    color: #00226b;
   }
   
   /* Main content */
   .main {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
   }
+
+
