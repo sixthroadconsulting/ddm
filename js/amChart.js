@@ -1,4 +1,4 @@
-jQuery.getJSON("js/pak_districs.json", function(data) {
+jQuery.getJSON("js/pak_districts.json", function(data) {
   
   // convert GeoJSON to JavaScript Maps comptible object
   var mapVar = AmCharts.parseGeoJSON(data);
