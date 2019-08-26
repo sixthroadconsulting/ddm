@@ -1,4 +1,4 @@
-jQuery.getJSON("https://gist.githubusercontent.com/sixthroadconsulting/06fb6c6081d7605ec05d332cdff5ae06/raw/9f385adcbeadd6a4a6caaa780659dd62243717ed/pak_districts.json", function(data) {
+jQuery.getJSON("js/pak_districs.json", function(data) {
   
   // convert GeoJSON to JavaScript Maps comptible object
   var mapVar = AmCharts.parseGeoJSON(data);
