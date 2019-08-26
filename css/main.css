@@ -17,6 +17,12 @@ body {
   
 }
 
+/* Style the Interactive AMCHART */
+#chartdiv {
+  width: 100%;
+  height: 100%;
+}
+
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;

@@ -20,7 +20,15 @@
   <!--Call Javascript for Tableau API-->
   <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
   <script type="text/javascript" src="js/crosstab.js"></script>
+  <!--GEO JSON & Interactive Map -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geojson2svg/1.0.2/geojson2svg.min.js"></script>
+
+  <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+  <script type="text/javascript" src="js/amChart.js"></script>
   
+
   <!--Site header logo and text-->
   <div class="logos">
     <!-- <a href="https://adb.org"><img src="img/adb-logo.png" alt="Asian Development Bank" width="128" height="128"></a>
@@ -35,12 +43,13 @@
 
     <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">Home</button>
     <button class="tablinks" onclick="openTab(event, 'Cross-Tabulation')">Analysis</button>
-    <button class="tablinks" onclick="openTab(event, 'Results')">Results</button>
+    <button class="tablinks" onclick="openTab(event, 'Results')">Insights</button>
     <button class="tablinks" onclick="openTab(event, 'Reference')">Reference</button>
   </div>
 
 
   <div id="About" class="tabcontent">
+    
     <p align="justify" style="color:#00226b;">A robust "District Development Monitor (DDM)" was developed for ECD in Pakistan, which is a
       dynamic, flexible and real-time updated analytical tool and framework designed to facilitate the Decision
       Support Systems (DSS) during the various stages of project life cycle including planning, implementation,
@@ -50,7 +59,9 @@
       user’s end. It enabled the evaluation of projects across a range of critical sectors such as infrastructure,
       energy, transportation, logistics, water resource management and sanitization, education, health and so forth.
     </p>
-    <img src="img/about.png" alt="DDM" width="100%" height="100%">  
+    <div id="chartdiv"></div>
+    <!--<img src="img/about.png" alt="DDM" width="100%" height="100%">  -->
+    
   </div>
 
 
