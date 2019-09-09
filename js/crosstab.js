@@ -11,8 +11,7 @@ var vizList = ["https://public.tableau.com/views/PovertyDataPortal-NEW1/Dashboar
         "https://public.tableau.com/shared/QBCZRW53B?:toolbar=no&:display_count=yes&:origin=viz_share_link",
         "https://public.tableau.com/views/EconomicEndowment/Dashboard1?:embed=y&:display_count=yes&:origin=viz_share_link",
         "https://public.tableau.com/views/CensusofManufacturingIndustriesCMI-ValueofOutput/Dashboard1?:embed=y&:display_count=yes&publish=yes&:origin=viz_share_link",
-        "https://public.tableau.com/views/CMI-TotalDailyEmployment/Dashboard1?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link"
-        ];
+        "https://public.tableau.com/views/CMI-TotalDailyEmployment/Dashboard1?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link"];
     
 var viz;
 
