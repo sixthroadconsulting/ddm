@@ -5,7 +5,7 @@ var vizList = ["https://public.tableau.com/views/PovertyDataPortal-NEW1/Dashboar
         "https://public.tableau.com/views/PakistanPovertyIndicators/Poverty",
         "https://public.tableau.com/views/PopulationDistributionAcrossProvinces/Population-Dashboard",
         "https://public.tableau.com/views/Pakistan_Indicators/PSLM-Dashboard",
-        "https://public.tableau.com/views/MultipleIndicatorsClusterSurveyMICS2014forPunjabSindh/MICS-Dashboard",
+        "https://public.tableau.com/profile/yahya.bajwa#!/vizhome/MICS/Dashboard1?publish=yes",
         "https://public.tableau.com/views/DistrictFragilityOverview/Dashboard1",
         "https://public.tableau.com/views/CrimesAgainstWomenFAFEN2010-12/CrimesAgainstWomen?:embed=y&:display_count=yes&:toolbar=no&:origin=viz_share_link",
         "https://public.tableau.com/shared/QBCZRW53B?:toolbar=no&:display_count=yes&:origin=viz_share_link",
